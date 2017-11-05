@@ -9,14 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.minminaya.privatetestproject.App;
 import cn.minminaya.privatetestproject.R;
 
-/**
+/** 
  * Created by Niwa on 2017/11/4.
  */
 
@@ -68,6 +70,14 @@ public class ZhihuAdAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             if (holder instanceof ViewHolderA) {
                 ViewHolderA viewHolderA = (ViewHolderA) holder;
                 viewHolderA.tvRecyclerViewItem.setText(list.get(position));
+            } else if (holder instanceof ViewHolderB) {
+                ViewHolderB viewHolderB = (ViewHolderB) holder;
+                viewHolderB.imgRecyclerViewItem.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(App.getINSTANCE(), "广告跳转", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         }
 
@@ -75,6 +85,7 @@ public class ZhihuAdAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             imgZhihu.setVisibility(View.VISIBLE);
         } else {
             imgZhihu.setVisibility(View.GONE);
+
         }
     }
 

@@ -67,12 +67,4 @@ public class ZhihuAdActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.img_zhihu})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_zhihu:
-                Toast.makeText(this,"广告跳转",Toast.LENGTH_SHORT).show();
-                break;
-        }
-    }
 }
