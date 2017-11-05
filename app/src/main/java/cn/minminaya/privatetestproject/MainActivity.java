@@ -1,5 +1,6 @@
 package cn.minminaya.privatetestproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +10,9 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.minminaya.privatetestproject.view.zhihu.ZhihuAdActivity;
 
 public class MainActivity extends AppCompatActivity {
-
     @BindView(R.id.btn_zhihu_ad)
     Button btnZhihuAd;
     @BindView(R.id.btn_null)
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_zhihu_ad:
                 Toast.makeText(this, "知乎滑动广告", Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(this, ZhihuAdActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.btn_null:
                 Toast.makeText(this, "null", Toast.LENGTH_SHORT).show();
