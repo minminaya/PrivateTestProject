@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import cn.minminaya.privatetestproject.App;
 import cn.minminaya.privatetestproject.R;
 
-/** 
+/**
  * Created by Niwa on 2017/11/4.
  */
 
