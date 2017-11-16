@@ -42,7 +42,6 @@ public class ZhihuAdActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerViewZhihu.getLayoutManager();
         adAdapter = new ZhihuAdAdapter(imgZhihu, layoutManager);
         recyclerViewZhihu.setAdapter(adAdapter);
-
         for (int i = 0; i < 30; i++) {
             lists.add("item" + i);
         }

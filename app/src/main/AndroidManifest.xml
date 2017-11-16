@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.minminaya.privatetestproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -20,6 +22,7 @@
         <activity
             android:name=".view.zhihu.ZhihuAdActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".img.cache.ImagCacheActivity"></activity>
     </application>
 
 </manifest>
