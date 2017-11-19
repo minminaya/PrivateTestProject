@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.minminaya.privatetestproject.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:orientation="vertical"
+    tools:context="cn.minminaya.privatetestproject.MainActivity">
 
     <Button
         android:id="@+id/btn_zhihu_ad"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="仿知乎广告"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_lru"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:text="LruCache的使用"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAllCaps="false" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_img_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片的压缩"
+        android:textAllCaps="false" />
+
+</LinearLayout>

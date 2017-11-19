@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.minminaya.privatetestproject.img.cache.ImagCacheActivity;
+import cn.minminaya.privatetestproject.img.load.LoadCompressImgActivity;
 import cn.minminaya.privatetestproject.view.zhihu.ZhihuAdActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnZhihuAd;
     @BindView(R.id.btn_lru)
     Button btnNull;
+    @BindView(R.id.btn_img_load)
+    Button btnImgLoad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +31,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_zhihu_ad, R.id.btn_lru})
+    @OnClick({R.id.btn_zhihu_ad, R.id.btn_lru,R.id.btn_img_load})
     public void onViewClicked(View view) {
+        Intent intent = null;
         switch (view.getId()) {
             case R.id.btn_zhihu_ad:
                 Toast.makeText(this, "知乎滑动广告", Toast.LENGTH_SHORT).show();
-                Intent intent1 = new Intent(this, ZhihuAdActivity.class);
-                startActivity(intent1);
+                intent = new Intent(this, ZhihuAdActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_lru:
-                Intent intent2 = new Intent(this, ImagCacheActivity.class);
-                startActivity(intent2);
-                Toast.makeText(this, "null", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, ImagCacheActivity.class);
+                startActivity(intent);
+                Toast.makeText(this, "LruCache", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_img_load:
+                intent = new Intent(this, LoadCompressImgActivity.class);
+                startActivity(intent);
+                Toast.makeText(this, "图片压缩", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

@@ -30,8 +30,8 @@ public class ImageLoader {
     public ImageLoader(RecyclerView recyclerView) {
         this.recyclerView = recyclerView;
         mTask = new HashSet<>();
-        int maxMemory = (int) Runtime.getRuntime().maxMemory();
-        int cacheSize = maxMemory / 8;
+        int maxMemory = (int) Runtime.getRuntime().maxMemory();//当前内存大小
+        int cacheSize = maxMemory / 8;//设置为当前内容的1/8
         mBitmapLruCache = new LruCache<String, Bitmap>(cacheSize) {
             //重写
             @Override

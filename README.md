@@ -12,5 +12,10 @@
 
 ![LruCache的实例](https://i.loli.net/2017/11/16/5a0d4ae469fd6.jpg)
 
+3 图片压缩的简单例子
+
+[图片加载原理](http://www.jianshu.com/p/94e37c901107)
+
+
 
 
