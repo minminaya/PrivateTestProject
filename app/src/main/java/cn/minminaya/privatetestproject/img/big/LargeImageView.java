@@ -160,11 +160,13 @@ public class LargeImageView extends View {
         int imageHeight = mImgHeight;
 
 
-        //默认显示图片的中心区域
-        mRect.left = imageWidth / 2 - width / 2;
-        mRect.top = imageHeight / 2 - height / 2;
-        mRect.right = mRect.left + width;
-        mRect.bottom = mRect.left + height;
+        Log.e("LargeImageView","width:"+width);
+        Log.e("LargeImageView","height:"+height);
+        Log.e("LargeImageView","imageWidth:"+imageWidth);
+        Log.e("LargeImageView","imageHeight:"+imageHeight);
+
+        //这里大小不能超过4096*4096，不然显示不出来
+        mRect.set(0,0,2000,imageHeight);
     }
 
     @Override
