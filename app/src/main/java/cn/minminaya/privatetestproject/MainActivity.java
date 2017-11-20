@@ -11,6 +11,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.minminaya.privatetestproject.img.big.LoadBigActivity;
 import cn.minminaya.privatetestproject.img.cache.ImagCacheActivity;
 import cn.minminaya.privatetestproject.img.load.LoadCompressImgActivity;
 import cn.minminaya.privatetestproject.view.zhihu.ZhihuAdActivity;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnNull;
     @BindView(R.id.btn_img_load)
     Button btnImgLoad;
+    @BindView(R.id.btn_img_big)
+    Button btnImgBig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_zhihu_ad, R.id.btn_lru,R.id.btn_img_load})
+    @OnClick({R.id.btn_zhihu_ad, R.id.btn_lru, R.id.btn_img_load, R.id.btn_img_big})
     public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
@@ -49,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, LoadCompressImgActivity.class);
                 startActivity(intent);
                 Toast.makeText(this, "图片压缩", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.btn_img_big:
+                intent = new Intent(this, LoadBigActivity.class);
+                startActivity(intent);
+                Toast.makeText(this, "加载巨图", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

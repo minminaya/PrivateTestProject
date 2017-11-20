@@ -28,4 +28,11 @@
         android:text="图片的压缩"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_img_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载巨图(6.0出现问题)"
+        android:textAllCaps="false" />
+
 </LinearLayout>
