@@ -24,7 +24,10 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".img.cache.ImagCacheActivity" />
         <activity android:name=".img.load.LoadCompressImgActivity" />
-        <activity android:name=".img.big.LoadBigActivity"></activity>
+        <activity android:name=".img.big.LoadBigActivity" />
+        <activity
+            android:name=".view.custom.HencoderActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

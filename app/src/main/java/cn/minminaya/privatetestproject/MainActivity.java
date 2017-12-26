@@ -14,6 +14,8 @@ import butterknife.OnClick;
 import cn.minminaya.privatetestproject.img.big.LoadBigActivity;
 import cn.minminaya.privatetestproject.img.cache.ImagCacheActivity;
 import cn.minminaya.privatetestproject.img.load.LoadCompressImgActivity;
+import cn.minminaya.privatetestproject.view.custom.HencoderActivity;
+import cn.minminaya.privatetestproject.view.custom.HencoderView;
 import cn.minminaya.privatetestproject.view.zhihu.ZhihuAdActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,10 +33,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
     }
 
-    @OnClick({R.id.btn_zhihu_ad, R.id.btn_lru, R.id.btn_img_load, R.id.btn_img_big})
+    @OnClick({R.id.btn_zhihu_ad, R.id.btn_lru, R.id.btn_img_load, R.id.btn_img_big, R.id.btn_3D_camara})
     public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
@@ -59,6 +60,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 Toast.makeText(this, "加载巨图", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.btn_3D_camara:
+                intent = new Intent(this, HencoderActivity.class);
+                startActivity(intent);
+                Toast.makeText(this, "加载HencoderView", Toast.LENGTH_SHORT).show();
+                break;
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }
