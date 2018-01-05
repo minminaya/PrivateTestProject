@@ -40,5 +40,10 @@
         android:layout_height="wrap_content"
         android:text="hencoder仿3D"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_data_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="华为天气温度条" />
 
 </LinearLayout>

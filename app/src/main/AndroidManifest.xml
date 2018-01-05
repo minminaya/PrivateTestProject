@@ -28,6 +28,9 @@
         <activity
             android:name=".view.custom.HencoderActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".view.custom.HuaweiLoadingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>

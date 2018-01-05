@@ -97,7 +97,7 @@ public class HencoderView extends View {
 
         objectAnimator2 = ObjectAnimator.ofInt(this, "rotateZ", 0, 270);
         objectAnimator2.setInterpolator(new AccelerateDecelerateInterpolator());
-        objectAnimator2.setDuration(3000);
+        objectAnimator2.setDuration(2000);
 
         objectAnimator1 = ObjectAnimator.ofInt(this, "rotateY", 0, 45);
         objectAnimator1.setInterpolator(new LinearInterpolator());
